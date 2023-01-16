@@ -289,6 +289,13 @@ given"
         with redirect_stdout(f):
             r.display()
         s = """
+
+
+
+
+
+
+
        #####
        #####
        #####
@@ -317,6 +324,16 @@ given"
         with redirect_stdout(f):
             r.display()
         s = """\
+
+
+
+
+
+
+
+
+
+
           #
 """
         self.assertEqual(f.getvalue(), s)
@@ -350,6 +367,10 @@ given"
         with redirect_stdout(f):
             r.display()
         s = """\
+
+
+
+
 #####
 #####
 #####
