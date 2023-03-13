@@ -1,14 +1,16 @@
 #!/usr/bin/node
 
 function add (a, b) {
-  return a + b;
+  /**
+     * Prints the addition of two integers
+     * Args:
+     *  a(integer): the first argument is the first integer
+     *  b(integer): the second argument is the second integer
+     */
+  a = parseInt(process.argv[2]);
+  b = parseInt(process.argv[3]);
+  const result = a + b;
+  console.log(result);
 }
 
-let a = parseInt(process.argv[2]);
-let b = parseInt(process.argv[3]);
-
-if (a && b) {
-  console.log(add(a, b));
-} else {
-  console.log(b);
-}
+add(10, 30);
