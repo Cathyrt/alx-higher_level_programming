@@ -9,8 +9,9 @@ request(url + movieId, function (err, response, body) {
     console.log(err);
   }
   const movie = JSON.parse(body).characters;
-  characters.forEach((character) => {
-    request(element, (err, res, body) => {
+
+  movies.forEach(element => {
+    request(element, (err, response, body) => {
       if (err) {
         console.log(err);
       }
