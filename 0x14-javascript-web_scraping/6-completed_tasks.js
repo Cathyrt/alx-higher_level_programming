@@ -5,16 +5,16 @@ const url = process.argv[2];
 
 request(url, function (err, response, body) {
   if (err == null) {
+    const resp = {};
     const json = JSON.parse(body);
-    const finished = {};
     for (let i = 0; i < json.length; i++) {
       if (json[i].completed === true) {
-        if (finished[json[i].userId] === undefined) {
-          finished[json[i].userId] = 0;
-	}
-        finished[json[i].userId]++;
+        if (resp[json[i].userId] === undefined) {
+          resp[json[i].userId] = 0;
+        }
+        resp[json[i].userId]++;
       }
     }
-    console.log(finished);
+    console.log(resp);
   }
 });
